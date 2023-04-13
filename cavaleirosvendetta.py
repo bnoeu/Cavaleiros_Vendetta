@@ -41,7 +41,13 @@ else: #Ninja
 
 # TELA DE INTRODUÇÃO AO JOGO
 limpar_tela()
-print(F'''CAVALEIROS VENDETTA \nVocê será um {classes[id_jogador]}! seus atributos são: {vida_jogador} de vida, {forca} de forca e {magia} de magia\n''' + '-'*63)
+print('C')
+print('''
+    | ==================================================================== |
+    |                         CAVALEIROS VENDETTA                          |
+    | ==================================================================== |
+    ''')
+print(F'''Você será um {classes[id_jogador]}! seus atributos são: {vida_jogador} de vida, {forca} de forca e {magia} de magia\n''' + '-'*63)
 sleep(3)
 
 #Começo do jogo
