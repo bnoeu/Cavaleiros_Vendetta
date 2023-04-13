@@ -2,13 +2,17 @@ from time import sleep
 from random import randint
 from colorama import *
 
+
+
+
+#=========================== CavaleirosVendetta ===============================#
 classes = ['Barbaro', 'Mago', 'Ninja']
 id_jogador = randint(0, 2) # Escolhe aleatoriamente classe do jogador.
 vida_jogador, vida_monstro = randint(20, 30), randint(25, 35) 
 ataques_monstro = ['garras', 'presas', 'magias de goblin']
 acao_monstro = ['se esquiva', 'se defende', 'grita']
 turno, m_dano, ataque = 1, 0, 0
-força, magia = 0, 0
+forca, magia = 0, 0
 
 def informa(): #Informação dano no inimigo
     print(Back.RED +F'Você recebe {dano_monstro} de dano e fica com {vida_jogador} de vida.' + Style.RESET_ALL + '\n' +'-'*63)
@@ -21,17 +25,17 @@ def atacou(): #Executa ataque
 
 #Definições das classes.
 if id_jogador == 0: #Barbaro   
-    força = 25
-    magia = 10
+    FORCA = 25
+    MAGIA = 10
 elif classes == 1: # Mago
-    força = 10
-    magia = 25
+    FORCA = 10
+    MAGIA = 25
 else: #Ninja
-    força = 15
-    magia = 15
+    FORCA = 15
+    MAGIA = 15
 
 # TELA DE INTRODUÇÃO AO JOGO
-print(F'CAVALEIROS VENDETTA \nVocê será um {classes[id_jogador]}! seus atributos são: {vida_jogador} de vida, {força} de força e {magia} de magia\n' + '-'*63)
+print(F'''CAVALEIROS VENDETTA \nVocê será um {classes[id_jogador]}! seus atributos são: {vida_jogador} de vida, {forca} de forca e {magia} de magia\n''' + '-'*63)
 sleep(3)
 
 #Começo do jogo
