@@ -41,17 +41,17 @@ else: #Ninja
 
 # TELA DE INTRODUÇÃO AO JOGO
 limpar_tela()
-print('C')
 print('''
-    | ==================================================================== |
-    |                         CAVALEIROS VENDETTA                          |
-    | ==================================================================== |
+| ==================================================================== |
+|                         CAVALEIROS VENDETTA                          |
+| ==================================================================== |
     ''')
 print(F'''Você será um {classes[id_jogador]}! seus atributos são: {vida_jogador} de vida, {forca} de forca e {magia} de magia\n''' + '-'*63)
-sleep(3)
+sleep(8)
 
 #Começo do jogo
 while vida_monstro > 1:
+    limpar_tela()
     print(Back.BLUE +  ' '*29 + F'TURNO {turno}' + ' '*25 + Style.RESET_ALL)
     print(' '*15 + Back.LIGHTBLACK_EX + F'Você tem {vida_jogador}HP o monstro tem {vida_monstro}HP' + Style.RESET_ALL + '\n' + '-'*63 )
     print(' '*22 + 'ESCOLHA SEU ATAQUE')
@@ -71,6 +71,8 @@ while vida_monstro > 1:
     elif ataque == 3:
         vida_monstro = 1
     turno += 1
+    sleep(5)
+limpar_tela()
 print(' '*24 + Back.LIGHTGREEN_EX + 'FIM DO JOGO!' + Style.RESET_ALL + '\n' + '-'*63)
 print('REVISÃO DA SUA JORNADA!')
 print(F'O jogo terminou no turno: {turno}.')
