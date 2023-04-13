@@ -1,3 +1,4 @@
+import sys
 from time import sleep
 from random import randint
 from colorama import *
@@ -13,6 +14,10 @@ ataques_monstro = ['garras', 'presas', 'magias de goblin']
 acao_monstro = ['se esquiva', 'se defende', 'grita']
 turno, m_dano, ataque = 1, 0, 0
 forca, magia = 0, 0
+
+def limpar_tela(): #Realiza a limpeza do sistema utilizando CLS
+    init(wrap=False)
+    AnsiToWin32(sys.stderr).write("\x1b[2J\x1b[H")
 
 def informa(): #Informação dano no inimigo
     print(Back.RED +F'Você recebe {dano_monstro} de dano e fica com {vida_jogador} de vida.' + Style.RESET_ALL + '\n' +'-'*63)
@@ -35,6 +40,7 @@ else: #Ninja
     MAGIA = 15
 
 # TELA DE INTRODUÇÃO AO JOGO
+limpar_tela()
 print(F'''CAVALEIROS VENDETTA \nVocê será um {classes[id_jogador]}! seus atributos são: {vida_jogador} de vida, {forca} de forca e {magia} de magia\n''' + '-'*63)
 sleep(3)
 
