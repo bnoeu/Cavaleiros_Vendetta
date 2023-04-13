@@ -1,5 +1,5 @@
 # Cavaleiros_Vendetta
-Cavaleiros Vendetta
+:crossed_swords: Cavaleiros Vendetta :crossed_swords:
 
 *Criação de jogo RPG utilizando conhecimentos básicos de Python
 
