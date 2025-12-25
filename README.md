@@ -1,4 +1,5 @@
-# :crossed_swords: Cavaleiros Vendetta :crossed_swords: 
+![Captura de Tela Inicial](./img/logo_principal.png)
+
 
 :video_game:Criação de jogo RPG utilizando conhecimentos básicos de Python:video_game:
 
